@@ -6,7 +6,13 @@ module.exports = function(grunt) {
     concat: {
       js: {
         files: {
-          'src/js/application.js' : ['src/js/vendor/**/*.js', 'src/js/base/*.js', 'src/js/section/*.js']
+          'src/js/application.js' : [ 'src/js/vendor/**/*.js', 
+                                      'src/js/base/*.js',
+                                      'src/js/section/favorites.js',
+                                      'src/js/section/*.js', 
+                                      '!src/js/section/page_events.js', // exclude file 
+                                      'src/js/section/page_events.js'   // add file at the end
+                                    ]
         }
       }
     },

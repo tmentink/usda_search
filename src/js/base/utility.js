@@ -1,34 +1,11 @@
 
 
 /*=================================
-  Utility.js
+  utility.js
   =================================*/
 
-  var utility = (function () {
-
-    /* selector_cache
-    -------------------------------*/
-    var selector_cache = function() {
-      var elementCache = {};
-
-      var get_from_cache = function( selector, $ctxt, reset ) {
-        if ( 'boolean' === typeof $ctxt ) {
-          reset = $ctxt;
-          $ctxt = false;
-        }
-        var cacheKey = $ctxt ? $ctxt.selector + ' ' + selector : selector;
-
-        if ( undefined === elementCache[ cacheKey ] || reset ) {
-          elementCache[ cacheKey ] = $ctxt ? $ctxt.find( selector ) : jQuery( selector );
-        }
-
-        return elementCache[ cacheKey ];
-      };
-
-      get_from_cache.elementCache = elementCache;
-      return get_from_cache;
-    }
-
+  !(function (root) {
+    "use strict";
 
     /* debounce
     -------------------------------*/
@@ -44,7 +21,6 @@
         }, delay);
       };
     }
-
 
     /* throttle
     -------------------------------*/
@@ -72,13 +48,40 @@
       };
     }
 
+    /* selector_cache
+    -------------------------------*/
+    if (root.jQuery) {
+      var selector_cache = function() {
+        var elementCache = {};
+
+        var get_from_cache = function( selector, $ctxt, reset ) {
+          if ( "boolean" === typeof $ctxt ) {
+            reset = $ctxt;
+            $ctxt = false;
+          }
+          var cacheKey = $ctxt ? $ctxt.selector + ' ' + selector : selector;
+
+          if ( undefined === elementCache[ cacheKey ] || reset ) {
+            elementCache[ cacheKey ] = $ctxt ? $ctxt.find( selector ) : jQuery( selector );
+          }
+
+          return elementCache[ cacheKey ];
+        };
+
+        get_from_cache.elementCache = elementCache;
+        return get_from_cache;
+      }
+    }
 
     /* public methods
     -------------------------------*/
-    return {
-      selector_cache: selector_cache,
+    root.utility = {
       debounce: debounce,
       throttle: throttle
     };
 
-  })();
+    if (selector_cache) {
+      root.$cache = new selector_cache();
+    } 
+
+  })(this);
