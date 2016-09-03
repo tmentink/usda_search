@@ -9,8 +9,8 @@
     /* font awesome namespace
     -------------------------------*/
     page.fa = {
-      filled: "fa fa-heart",
-      outline: "fa fa-heart-o"
+      fav: "fa fa-heart",
+      fav_o: "fa fa-heart-o"
     };
 
     return page;

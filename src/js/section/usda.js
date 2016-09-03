@@ -65,9 +65,9 @@
         });
 
         // set icon class 
-        icon = page.fa.outline;
+        icon = page.fa.fav_o;
         if (page.favorites.exists(foodID)) {
-          icon = page.fa.filled;
+          icon = page.fa.fav;
         }
 
         // concat string

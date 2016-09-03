@@ -1,9 +1,76 @@
+
 // ===========================================
 // Global Config
 // ===========================================
 
-// Base Colors
 
+/* Classes
+---------------------------------*/
+// favorite icon
+$fav   : 'fa-heart';
+$fav-o : 'fa-heart-o';
+
+
+
+/* Colors
+---------------------------------*/
+// Base Colors
 $white  : #fff;
-$black  : #0b0b0b;
-$grey   : #797e83;
+$black  : #000;
+
+
+// Theme Colors
+$boston-blue : #428bca;
+$mustard     : #ffd950;
+$roman       : #d9534f;
+
+
+// Color Usage
+$color-primary   : $boston-blue;
+$color-secondary : $roman;
+$color-favorite  : $roman;
+
+
+// Color Shades
+$color-shades: (
+  white: (
+    base    : $white,
+    dark    : darken($white, 5%),
+    x-dark  : darken($white, 10%),
+    xx-dark : darken($white, 15%)
+  ),
+  primary: (
+    xx-light : lighten($color-primary, 20%),
+    x-light  : lighten($color-primary, 15%),
+    light    : lighten($color-primary, 10%),
+    base     : $color-primary,
+    dark     : darken($color-primary, 10%),
+    x-dark   : darken($color-primary, 15%),
+    xx-dark  : darken($color-primary, 20%)
+  ),
+  secondary: (
+    xx-light : lighten($color-secondary, 20%),
+    x-light  : lighten($color-secondary, 15%),
+    light    : lighten($color-secondary, 10%),
+    base     : $color-secondary,
+    dark     : darken($color-secondary, 10%),
+    x-dark   : darken($color-secondary, 15%),
+    xx-dark  : darken($color-secondary, 20%)
+  ),
+  favorite: (
+    xx-light : lighten($color-favorite, 20%),
+    x-light  : lighten($color-favorite, 15%),
+    light    : lighten($color-favorite, 10%),
+    base     : $color-favorite,
+    dark     : darken($color-favorite, 10%),
+    x-dark   : darken($color-favorite, 15%),
+    xx-dark  : darken($color-favorite, 20%)
+  ),
+);
+
+
+
+
+
+
+

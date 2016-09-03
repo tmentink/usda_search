@@ -9,8 +9,8 @@
     /* font awesome namespace
     -------------------------------*/
     page.fa = {
-      filled: "fa fa-heart",
-      outline: "fa fa-heart-o"
+      fav: "fa fa-heart",
+      fav_o: "fa fa-heart-o"
     };
 
     return page;
@@ -243,9 +243,9 @@
         });
 
         // set icon class 
-        icon = page.fa.outline;
+        icon = page.fa.fav_o;
         if (page.favorites.exists(foodID)) {
-          icon = page.fa.filled;
+          icon = page.fa.fav;
         }
 
         // concat string
@@ -343,7 +343,7 @@
       // toggle favorite
       .on("click", ".favorite", function(e) {
         e.stopPropagation();
-        $(this).toggleClass(page.fa.filled + " " + page.fa.outline);
+        $(this).toggleClass(page.fa.fav + " " + page.fa.fav_o);
 
         var id = $(this).parent().attr("data-ndbno");
         var name = $(this).parent().attr("data-name");

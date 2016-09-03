@@ -35,7 +35,7 @@
       // toggle favorite
       .on("click", ".favorite", function(e) {
         e.stopPropagation();
-        $(this).toggleClass(page.fa.filled + " " + page.fa.outline);
+        $(this).toggleClass(page.fa.fav + " " + page.fa.fav_o);
 
         var id = $(this).parent().attr("data-ndbno");
         var name = $(this).parent().attr("data-name");

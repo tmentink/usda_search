@@ -1,0 +1,40 @@
+
+// ===========================================
+// Body / HTML
+// ===========================================
+
+
+/* Structure
+---------------------------------*/
+html,
+body {
+  height: 100%;
+  text-align: center;
+  z-index: 0;
+}
+
+
+/* Color
+---------------------------------*/ 
+html,
+body {
+  background: color-shade(white, dark);
+}
+
+
+
+#title {
+  margin: 15px 0;
+  color: $color-primary;
+}
+
+
+
+
+
+
+
+
+
+
+

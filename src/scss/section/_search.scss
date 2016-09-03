@@ -1,0 +1,58 @@
+
+// ===========================================
+// Search
+// ===========================================
+
+
+/* Structure
+---------------------------------*/
+#txtSearch {
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  margin: 0 auto;
+  outline: none;
+  padding: 1px 1px 1px 10px;
+  width: 275px;
+  
+  transition: 0.3s ease-in-out;
+}
+
+
+/* Font
+---------------------------------*/
+#txtSearch {
+  font-size: 24px;
+}
+
+
+/* Color
+---------------------------------*/ 
+#txtSearch {
+  border-color: rgba($black, 0.2);
+  color: rgba($black, 0.7);
+}
+
+// set placeholder colors
+#txtSearch {
+  @include placeholder {
+    color: rgba($black, 0.5);
+  }
+}
+
+
+/* Effects
+---------------------------------*/ 
+#txtSearch:focus {
+  border-color: $color-primary;
+  box-shadow: 0 0 5px $color-primary;
+}
+
+
+
+
+
+
+
+
+

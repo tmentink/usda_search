@@ -1,0 +1,91 @@
+
+// ===========================================
+// Results
+// ===========================================
+
+
+/* Structure
+---------------------------------*/
+#results {
+  font-size: 20px;
+  margin: 25px auto 0;
+  max-width: 600px;
+  padding: 0;
+  text-align: left;
+}
+
+.searchItem {
+  border-top: 1px solid; 
+  border-bottom: 1px solid; 
+  border-left: 2px solid;
+  cursor: pointer; 
+  padding: 10px 50px 10px 10px; 
+  position: relative;
+  width: 100%;
+}
+
+
+/* Color
+---------------------------------*/
+.searchItem {
+  background: $white;
+  border-top-color: rgba($white, 0.1);
+  border-bottom-color: rgba($black, 0.1);
+  border-left-color: transparent;
+  color: $color-primary;
+}
+
+
+/* Effects
+---------------------------------*/
+.searchItem:hover {
+  background: rgba($white, 0.8);
+  border-left-color: $color-primary;
+  color: color-shade(primary, x-dark);
+  transition: border 0.3s ease-in-out;
+}
+
+
+/* Favorite Icons
+---------------------------------*/
+.favorite {
+  font-size: 24px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  transition: 0.3s;
+  -webkit-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+}
+
+// filled
+.#{$fav} {
+  color: $color-favorite;
+}
+
+// filled:hover
+.#{$fav}:hover {
+  color: color-shade(favorite, dark);
+}
+
+// outline
+.#{$fav-o} {
+  color: rgba($black, 0.4);
+}
+
+// outline:hover
+.#{$fav-o}:hover {
+  color: $color-favorite;  
+}
+
+
+
+
+
+
+
+
+
+
