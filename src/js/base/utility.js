@@ -22,6 +22,7 @@
       };
     }
 
+
     /* throttle
     -------------------------------*/
     var throttle = function(fn, delay) {
@@ -48,6 +49,7 @@
       };
     }
 
+
     /* selector_cache
     -------------------------------*/
     if (root.jQuery) {
@@ -72,6 +74,7 @@
         return get_from_cache;
       }
     }
+    
 
     /* public methods
     -------------------------------*/

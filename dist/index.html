@@ -6,14 +6,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
+    <title>USDA Nutrient Database Search</title>
+    <meta name="description" content="Simple website to search the USDA nutrient database.">
     <meta name="author" content="Trent Mentink">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">   
-    <link rel="stylesheet" href="css/main.min.css">
+    
+    <!-- Font Awesome --> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="css/main.min.css">
+
     <!-- Modernizer --> 
     <script src="js/vendor/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
@@ -24,12 +28,20 @@
         </div>      
     <![endif]-->
 
-    <div id="page-wrapper" class="container-fluid relative">
-      <h1 id="title">USDA Nutrient Database</h1>
+    <h1 id="title">USDA Nutrient Database</h1>
+    <input type="text" id="txtSearch" placeholder="Search..."/>
+    <div id="results"></div>
 
-      <input type="text" id="txtSearch" placeholder="Search..."/>
 
-      <div id="results"></div>
+<!-- NUTRITION SECTION 
+===========================================--> 
+    <div data-remodal-id="modal">
+      <div id="nutrient-modal">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h3 id="nutrient-header"></h3>
+        <h5 id="nutrient-serving"></h5>
+        <div id="nutrient-list"></div>
+      </div>
     </div>
  
 
@@ -44,8 +56,7 @@
       <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="js/vendor/jquery/jquery-2.2.3.min.js"><\/script>')</script>
     <!--<![endif]-->
-
-    
+ 
     <!-- Custom JavaScript -->
     <script src="js/main.min.js"></script>
   </body>

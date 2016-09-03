@@ -21,6 +21,7 @@
       return arrFav;
     }
 
+
     var _setFavorites = function(arrFav) {
       localStorage.setItem("usda.favorites", JSON.stringify(arrFav));
     }
@@ -41,6 +42,7 @@
       // id not found in array
       return false;
     }
+    
 
     var update = function(objFav) {
       var arrFav = _getFavorites();

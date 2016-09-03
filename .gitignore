@@ -12,6 +12,11 @@
 *.zip
 
 
+# Custom #
+#########
+*.exclude
+
+
 # Grunt #
 #########
 node_modules/
